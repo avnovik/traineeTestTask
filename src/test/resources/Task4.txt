@@ -1,0 +1,10 @@
+/*
+Задание 4
+Напишите xpath и CSS-селектор для кнопки-стрелки с https://ya.ru/ cкриншот.
+Сохраните результат в файле resources\Task4.txt.
+*/
+
+//специально чтобы проверить селектор создал SearchYandexTest.java
+
+CSS - button[type="submit"]
+XPATH - //button[@type="submit"]

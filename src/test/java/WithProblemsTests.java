@@ -1,3 +1,7 @@
+//Задание 1
+//Скорректируйте класс WithProblemsTests,
+//чтобы проект скомпилировался, а все пять тестов успешно завершились.
+
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -8,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class WithProblemsTests {
 
-    private final String CONST = "const";
+    private String CONST = "const";
     private final static String bd = "pui";
 
     @Test
@@ -24,7 +28,7 @@ public class WithProblemsTests {
     }
 
     @Test
-    public static void equalsOneToOne(){
+    public  void equalsOneToOneAnotherName(){
         assertEquals(1, 1);
     }
 
@@ -34,7 +38,7 @@ public class WithProblemsTests {
     public void stringsMustBeEquals(){
         String res = "a";
 
-        if (bd == new String("pui")) {
+        if (bd == "pui") {
             res = "asd";
         }
 
@@ -43,10 +47,9 @@ public class WithProblemsTests {
 
     @Test
     public void successfullyRemovingFirstElementFromList(){
-        List<String> sourceData = List.of("1", "viskas", "chupocabra");
-        for (String element: sourceData){
-            sourceData.remove(element);
-        }
+        List<String> sourceData = new java.util.ArrayList<>(List.of("1", "viskas", "chupocabra"));
+        sourceData.remove(0);
+
         assertFalse(sourceData.contains("1"));
     }
 
